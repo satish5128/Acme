@@ -11,6 +11,8 @@ public class Policy implements java.io.Serializable
 
    private java.lang.Integer price;
 
+   private java.lang.String policyType;
+
    public Policy()
    {
    }
@@ -25,9 +27,20 @@ public class Policy implements java.io.Serializable
       this.price = price;
    }
 
-   public Policy(java.lang.Integer price)
+   public java.lang.String getPolicyType()
+   {
+      return this.policyType;
+   }
+
+   public void setPolicyType(java.lang.String policyType)
+   {
+      this.policyType = policyType;
+   }
+
+   public Policy(java.lang.Integer price, java.lang.String policyType)
    {
       this.price = price;
+      this.policyType = policyType;
    }
 
 }
