@@ -11,6 +11,8 @@ public class Driver implements java.io.Serializable
 
    private java.lang.String name;
 
+   private java.lang.Integer age;
+
    public Driver()
    {
    }
@@ -25,9 +27,20 @@ public class Driver implements java.io.Serializable
       this.name = name;
    }
 
-   public Driver(java.lang.String name)
+   public java.lang.Integer getAge()
+   {
+      return this.age;
+   }
+
+   public void setAge(java.lang.Integer age)
+   {
+      this.age = age;
+   }
+
+   public Driver(java.lang.String name, java.lang.Integer age)
    {
       this.name = name;
+      this.age = age;
    }
 
 }
