@@ -1,2 +1,18 @@
 package org.acme.insurance;
 
+
+import org.acme.insurance.Driver
+import org.acme.insurance.Policy
+
+rule "SafeAdults"
+
+    when
+        //conditions
+        driver : Driver(age > 24, numberOfAccidents < 1, numberOfTickets <= 1)
+        policy : Policy(price == null, policyType == "AUTO")
+    then
+        //actions
+        modify(policy) {setPrice(120)};
+        System.out.println("fired rule " + kcontext.getRule().getName());
+
+end
