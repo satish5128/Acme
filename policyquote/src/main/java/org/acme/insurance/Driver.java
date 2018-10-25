@@ -15,6 +15,8 @@ public class Driver implements java.io.Serializable
 
    private java.lang.Integer numberOfAccidents;
 
+   private java.lang.Integer numberOfTickets;
+
    public Driver()
    {
    }
@@ -49,12 +51,23 @@ public class Driver implements java.io.Serializable
       this.numberOfAccidents = numberOfAccidents;
    }
 
+   public java.lang.Integer getNumberOfTickets()
+   {
+      return this.numberOfTickets;
+   }
+
+   public void setNumberOfTickets(java.lang.Integer numberOfTickets)
+   {
+      this.numberOfTickets = numberOfTickets;
+   }
+
    public Driver(java.lang.String name, java.lang.Integer age,
-         java.lang.Integer numberOfAccidents)
+         java.lang.Integer numberOfAccidents, java.lang.Integer numberOfTickets)
    {
       this.name = name;
       this.age = age;
       this.numberOfAccidents = numberOfAccidents;
+      this.numberOfTickets = numberOfTickets;
    }
 
 }
