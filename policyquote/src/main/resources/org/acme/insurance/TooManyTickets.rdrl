@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "TooManyTickets"
 	dialect "mvel"
 	when
+		Driver( numberOfTickets >= 6 )
 	then
+		Rejection fact0 = new Rejection();
+		fact0.setReason( "Too Many Tickets" );
+		insert( fact0 );
 end
