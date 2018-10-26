@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "TooOld"
 	dialect "mvel"
 	when
+		Driver( age > 80 )
 	then
+		Rejection fact0 = new Rejection();
+		fact0.setReason( "Too Old" );
+		insert( fact0 );
+		System.out.println("fired rule " + kcontext.getRule().getName());
 end
