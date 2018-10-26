@@ -13,4 +13,5 @@ rule "TooOld"
 		Rejection fact0 = new Rejection();
 		fact0.setReason( "Too Old" );
 		insert( fact0 );
+		System.out.println("fired rule " + kcontext.getRule().getName());
 end
