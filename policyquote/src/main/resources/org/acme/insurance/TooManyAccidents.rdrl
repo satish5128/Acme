@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "TooManyAccidents"
 	dialect "mvel"
 	when
+		Driver( numberOfAccidents >= 4 )
 	then
+		Rejection fact0 = new Rejection();
+		fact0.setReason( "Then reject with reason Too Many Accidents" );
+		insert( fact0 );
 end
