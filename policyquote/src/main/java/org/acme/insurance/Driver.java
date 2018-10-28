@@ -17,6 +17,8 @@ public class Driver implements java.io.Serializable
 
    private java.lang.Integer numberOfTickets;
 
+   private java.util.Date DOB;
+
    public Driver()
    {
    }
@@ -61,13 +63,25 @@ public class Driver implements java.io.Serializable
       this.numberOfTickets = numberOfTickets;
    }
 
+   public java.util.Date getDOB()
+   {
+      return this.DOB;
+   }
+
+   public void setDOB(java.util.Date DOB)
+   {
+      this.DOB = DOB;
+   }
+
    public Driver(java.lang.String name, java.lang.Integer age,
-         java.lang.Integer numberOfAccidents, java.lang.Integer numberOfTickets)
+         java.lang.Integer numberOfAccidents, java.lang.Integer numberOfTickets,
+         java.util.Date DOB)
    {
       this.name = name;
       this.age = age;
       this.numberOfAccidents = numberOfAccidents;
       this.numberOfTickets = numberOfTickets;
+      this.DOB = DOB;
    }
 
 }
